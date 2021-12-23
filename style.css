@@ -264,6 +264,8 @@ header p{
 	display: flex;
 	font-size: 1.1rem;
 	margin-bottom: 1rem;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .sosmed-tab{
@@ -501,7 +503,10 @@ header p{
 	.maps-page .maps-frame{
 		width: 100%;
 		height: 70%;
+		padding-left: 0;
+		padding-right: 0;
 		margin-bottom: 4rem;
+		border-radius: 0;
 	}
 
 	.maps-page .maps-frame iframe{
