@@ -436,7 +436,7 @@ header p{
 
 	nav .logo{
 		justify-content: space-around;
-		width: 70%;
+		width: 80%;
 	}
 
 	nav .menu ul,
@@ -541,5 +541,10 @@ header p{
 	}
 	.footer .footer-main .footer-p .ct-items i{
 		margin-right: 3px;
+	}
+
+	.footer .footer-text{
+		text-align: center;
+		font-size: 1rem;
 	}
 } 
