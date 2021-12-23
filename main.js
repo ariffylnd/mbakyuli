@@ -32,4 +32,7 @@ $(document).ready(function(){
   });
 });
 
+const d = new Date();
+document.getElementById("yearNow").innerHTML = d.getFullYear();
+
 // End Shooth Scrolling
