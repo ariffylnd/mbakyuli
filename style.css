@@ -385,7 +385,7 @@ header p{
 }
 
 .footer .footer-text a:hover{
-	color: white;
+	color: black;
 	transition: 0.25s;
 }
 
