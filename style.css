@@ -145,7 +145,7 @@ header{
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	box-shadow: inset 10px -100px 80px #000000;
+	box-shadow: inset 10px -50px 80px #000000;
 }
 
 header h2{
