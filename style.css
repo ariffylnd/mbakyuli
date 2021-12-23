@@ -138,7 +138,7 @@ nav .auth ul li a:hover{
 /* Header */
 
 header{
-	background-image: url('images/banner-example.bmp');
+	background-image: url('images/banner-example.png');
 	height: 100vh;
 	overflow: hidden;
 	display: flex;
