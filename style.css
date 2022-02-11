@@ -1,21 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Acme&family=Montserrat&display=swap');
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Poppins:wght@300;400;600;700&display=swap');
 
 * {
+	font-family: 'Poppins', sans-serif;
 	margin: 0;
 	padding: 0;
 }
 
+:root{
+	/* =====| Color |===== */
+	--primary-color: #0077B6;
+	--sec-color: #00B4D8;
+	--tre-color: #90E0EF;
+	--for-color: #CAF0F8;
+	--fiv-color: #03045E;
+}
+
 body{
-	font-family: 'Montserrat', sans-serif;
-	/* background-color: #9fa0ff; */
 	overflow-x: hidden;
 }
 
 nav{
 	position: fixed;
 	display: flex;
-	background-color: #9fa0ff;
+	background-color: var(--primary-color);
 	top: 0;
 	width: 100%;
 	height: 60px;
@@ -30,7 +37,7 @@ nav .logo{
 }
 
 nav .logo a{
-	color: #091f34;
+	color: var(--for-color);
 	text-decoration: none;
 }
 
@@ -45,6 +52,7 @@ nav .menu{
 }
 
 nav .auth{
+	display: none;
 	width: 15%;
 }
 
@@ -58,15 +66,15 @@ nav div.mobile-menu{
 }
 
 nav .menu ul li a{
-	color: #091f34;
+	color: var(--for-color);
 	text-decoration: none;
 	padding: 8px 8px;
 	border-radius: 4px;
 }
 
 nav .auth ul li a{
-	color: #091f34;
-	background-color: #8187dc;
+	color: var(--for-color);
+	background-color: var(--sec-color);
 	text-decoration: none;
 	padding: 8px 8px;
 	border-radius: 4px;
@@ -75,13 +83,13 @@ nav .auth ul li a{
 
 nav .menu ul li a:hover{
 	color: white;
-	background-color: #8187dc;
+	background-color: var(--sec-color);
 	transition: 0.5s;
 }
 
 nav .auth ul li a:hover{
 	color: white;
-	background-color: #8187dc;
+	background-color: var(--sec-color);
 	transition: 0.5s;
 	box-shadow: 2px 2px 1px #000000;
 }
@@ -206,7 +214,7 @@ header p{
 	width: 300px;
 	height: 100px;
 	align-items: center;
-	background-color: #9fa0ff;
+	background-color: var(--primary-color);
 	border-radius: 5px;
 	margin: 1rem;
 	margin-bottom: 2rem;
@@ -233,7 +241,7 @@ header p{
 }
 
 .produk-card .produk-text h5{
-	color: #3f37c9;
+	color: var(--for-color);
 	font-size: 1.1rem;
 }
 
@@ -242,7 +250,7 @@ header p{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background-color: #9fa0ff;
+	background-color: var(--primary-color);
 	padding-top: 2rem;
 	height: 100vh;
 }
@@ -250,7 +258,6 @@ header p{
 .contact-page .contact-text{
 	display: flex;
 	flex-direction: column;
-	/* justify-content: center; */
 	align-items: center;
 }
 
@@ -273,9 +280,11 @@ header p{
 	justify-content: center;
 }
 
-.sosmed-tab a.sosmed-item{
-	color: #091f34;
-	background-color: #8187dc;
+.sosmed-tab .sosmed-item{
+	display: flex;
+	align-items: center;
+	color: var(--for-color);
+	background-color: var(--sec-color);
 	text-decoration: none;
 	margin: 10px;
 	padding: 8px 8px;
@@ -283,11 +292,23 @@ header p{
 	transition: 0.5s;
 }
 
-.sosmed-tab a.sosmed-item:hover{
+.sosmed-tab .sosmed-item:hover{
 	color: white;
-	background-color: #8187dc;
+	background-color: var(--sec-color);
 	transition: 0.5s;
 	box-shadow: 2px 2px 1px #000000;
+}
+
+.footer .footer-main .footer-p .ct-email .email-main .icon,
+.footer .footer-main .footer-p .ct-email .email-sec .icon,
+.sosmed-tab .sosmed-item .icon{
+	font-size: 20px;
+	padding-right: 5px;
+}
+
+.sosmed-tab .sosmed-item span{
+	display: flex;
+	align-items: center;
 }
 
 /* Maps */
@@ -309,7 +330,7 @@ header p{
 .maps-page .maps-frame{
 	padding: 1rem;
 	padding-bottom: 0.8rem;
-	background-color: #9fa0ff;
+	background-color: var(--primary-color);
 	border-radius: 10px;
 }
 
@@ -324,7 +345,7 @@ header p{
 .footer{
 	display: flex;
 	flex-direction: column;
-	background-color: #9fa0ff;
+	background-color: var(--primary-color);
 	padding-top: 1rem;
 	width: 100%;
 	height: 100%;
@@ -341,7 +362,7 @@ header p{
 	display: flex;
 	font-family: 'Acme', sans-serif;
 	font-size: 2.5rem;
-	color: #091f34;
+	color: var(--for-color);
 	text-decoration: none;
 }
 
@@ -368,26 +389,35 @@ header p{
 	justify-content: space-between;
 	margin-top: 0.5rem;
 }
-.footer .footer-main .footer-p .ct-items i{
-	margin-right: 3px;
+
+.footer .footer-main .footer-p .ct-text .ct-email{
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+}
+
+.footer .footer-main .footer-p .ct-text .ct-email .email-main,
+.footer .footer-main .footer-p .ct-text .ct-email .email-sec{
+	display: flex;
+	align-items: center;
 }
 
 .footer .footer-text{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #8187dc;
+	background-color: var(--for-color);
 	padding: 15px;
 }
 
 .footer .footer-text a{
-	color: white;
+	color: var(--fiv-color);
 	letter-spacing: 0.1rem;
 	text-decoration: none;
 }
 
 .footer .footer-text a:hover{
-	color: black;
+	color: var(--sec-color);
 	transition: 0.25s;
 }
 
@@ -420,11 +450,12 @@ header p{
 	}
 
 	.footer .footer-main .footer-p .ct-text{
+		justify-content: center;
 		flex-direction: column;
 
 	}
-	.footer .footer-main .footer-p .ct-items{
-		padding-bottom: 5px;
+	.footer .footer-main .footer-p .ct-text .ct-email{
+		align-items: center;
 	}
 
 }
@@ -456,15 +487,16 @@ header p{
 	nav div.mobile-menu ul{
 		display: block;
 		position: fixed;
-		background-color: #B3B7C1;
+		background-color: var(--primary-color);
 		top: 59px;
 		right: 0;
 		height: auto;
 		width: 100%;
 		text-align: center;
 		transition: 0.5s;
-		opacity: 0;		
-		transform: scale(1);
+		opacity: 0;
+		/* z-index: 1; */
+		transform: translateY(-50vh);
 	}
 
 	nav div.mobile-menu ul li{
@@ -478,14 +510,14 @@ header p{
 
 	nav div.mobile-menu ul a li{
 		color: white;
-		background-color: #7d8597;
+		background-color: var(--sec-color);
 		border-radius: 5px;
 		padding: 5px 0 5px 0;
-		box-shadow: 2px 2px 1px #979dac;
+		box-shadow: 2px 2px 1px var(--fiv-color);
 	}
 
 	nav div.mobile-menu .slide{
-		opacity: 1 ;
+		opacity: 1;
 		transform: translateY(0);
 	}
 
@@ -502,16 +534,11 @@ header p{
 
 	.maps-page .maps-frame{
 		width: 100%;
-		height: 70%;
-		padding-left: 0;
-		padding-right: 0;
-		margin-bottom: 4rem;
-		border-radius: 0;
+		height: 50%;
+		padding: 0;
 	}
 
 	.maps-page .maps-frame iframe{
-		border-radius: 0;
-		width: 100%;
 		height: 100%;
 	}
 
@@ -534,13 +561,6 @@ header p{
 
 	.footer .footer-main .footer-p h3{
 		margin-bottom: 1rem;
-	}
-
-	.footer .footer-main .footer-p .ct-text{
-		align-content: center;
-	}
-	.footer .footer-main .footer-p .ct-items i{
-		margin-right: 3px;
 	}
 
 	.footer .footer-text{
