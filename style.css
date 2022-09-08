@@ -146,14 +146,13 @@ nav .auth ul li a:hover{
 /* Header */
 
 header{
-	background-image: url('images/banner-example.png');
+	background-color: var(--sec-color);
 	height: 100vh;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	box-shadow: inset 10px -50px 80px #000000;
 }
 
 header h2{
@@ -200,11 +199,8 @@ header p{
 .produk-list{
 	display: flex;
 	width: 100%;
-	/* background-color: pink; */
 	justify-content: center;
-	/* align-items: center; */
 	flex-wrap: wrap;
-	/* margin-top: 6rem; */
 	padding: 10px;
 	box-sizing: border-box;
 }
@@ -230,10 +226,6 @@ header p{
 	margin-right: 1rem;
 }
 
-.produk-card .produk-text{
-	/* text-align: center; */
-}
-
 .produk-card .produk-text h4{
 	font-family: 'Acme', sans-serif;
 	font-size: 1.4rem;
@@ -250,7 +242,7 @@ header p{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background-color: var(--primary-color);
+	background-color: var(--sec-color);
 	padding-top: 2rem;
 	height: 100vh;
 }
@@ -284,7 +276,7 @@ header p{
 	display: flex;
 	align-items: center;
 	color: var(--for-color);
-	background-color: var(--sec-color);
+	background-color: var(--primary-color);
 	text-decoration: none;
 	margin: 10px;
 	padding: 8px 8px;
@@ -293,13 +285,12 @@ header p{
 }
 
 .sosmed-tab .sosmed-item:hover{
-	color: white;
-	background-color: var(--sec-color);
+	color: black;
+	background-color: var(--tre-color);
 	transition: 0.5s;
 	box-shadow: 2px 2px 1px #000000;
 }
 
-.footer .footer-main .footer-p .ct-email .email-main .icon,
 .footer .footer-main .footer-p .ct-email .email-sec .icon,
 .sosmed-tab .sosmed-item .icon{
 	font-size: 20px;
@@ -375,7 +366,6 @@ header p{
 .footer .footer-main .footer-p{
 	display: flex;
 	flex-direction: column;
-	/* background-color: green; */
 	width: 40%;
 	text-align: center;
 }
@@ -396,7 +386,6 @@ header p{
 	align-items: start;
 }
 
-.footer .footer-main .footer-p .ct-text .ct-email .email-main,
 .footer .footer-main .footer-p .ct-text .ct-email .email-sec{
 	display: flex;
 	align-items: center;
@@ -406,18 +395,18 @@ header p{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--for-color);
+	background-color: var(--sec-color);
 	padding: 15px;
 }
 
 .footer .footer-text a{
-	color: var(--fiv-color);
+	color: white;
 	letter-spacing: 0.1rem;
 	text-decoration: none;
 }
 
 .footer .footer-text a:hover{
-	color: var(--sec-color);
+	color: black;
 	transition: 0.25s;
 }
 
