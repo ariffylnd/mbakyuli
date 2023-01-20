@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	/* =====| Color |===== */
+	--text-primary: #094067;
+	--text-secondary: #5f6c7b;
+	--text-three: #fffffe;
+	--text-four: #d8eefe;
+	--text-five: #3da9fc;
+
+	--bg-primary: #fffffe;
+	--bg-secondary: #d8eefe;
+	--bg-three: #094067;
+	--bg-four: #3da9fc;
+}
+
+body {
+	overflow-x: hidden;
+	background-color: var(--bg-secondary);
+}
+
+nav {
+	display: flex;
+	width: 100%;
+	height: 60px;
+	justify-content: space-around;
+	align-items: center;
+}
+
+nav .logo {
+	display: flex;
+	font-family: 'Acme', sans-serif;
+	font-size: 35px;
+}
+
+nav .logo a {
+	color: var(--text-primary);
+	text-decoration: none;
+}
+
+nav .logo a:hover {
+	transform: scale(1.03);
+	transition: 0.5s;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	justify-content: space-around;
+}
+
+div.mobile-menu {
+	display: none;
+}
+
+nav .menu ul li a {
+	color: var(--text-primary);
+	text-decoration: none;
+	padding: 8px;
+	border-radius: 4px;
+}
+
+nav .menu ul li a:hover {
+	color: var(--text-five);
+	transition: 0.3s;
+}
+
+.menu-toggle {
+	display: none;
+	flex-direction: column;
+	height: 19px;
+	justify-content: space-between;
+	position: relative;
+}
+
+.menu-toggle span {
+	display: block;
+	width: 28px;
+	height: 4px;
+	background-color: black;
+	border-radius: 3px;
+	transition: 0.5s;
+}
+
+.menu-toggle input {
+	position: absolute;
+	width: 45px;
+	height: 30px;
+	left: -9px;
+	top: -5px;
+	opacity: 0;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.menu-toggle span:nth-child(2) {
+	transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+	transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+	transform: rotate(45deg) translate(-2px, -1px);
+}
+
+.menu-toggle input:checked~span:nth-child(4) {
+	transform: rotate(-45deg) translate(-2px, 0);
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+	opacity: 0;
+	transform: scale(0);
+}
+
+/* Header */
+
+header {
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+header h1 {
+	display: flex;
+	color: var(--text-primary);
+	text-align: center;
+	font-family: 'Acme', sans-serif;
+	font-size: 82px;
+	margin-bottom: 1rem;
+}
+
+header p {
+	display: flex;
+	color: var(--text-secondary);
+	font-size: 30px;
+	text-align: center;
+	margin: 0px 13rem;
+}
+
+/* Container */
+.container {
+	margin: 2rem;
+}
+
+.section-title {
+	color: var(--text-primary);
+	font-family: 'Acme', sans-serif;
+	font-size: 45px;
+	margin-bottom: 10px;
+}
+
+/* Produk */
+.produk {
+	background-color: var(--bg-primary);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.produk-title {
+	display: flex;
+}
+
+.produk-list {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.produk .produk-list .produk-card {
+	display: flex;
+	width: 300px;
+	height: 100px;
+	align-items: center;
+	background-color: var(--bg-three);
+	border-radius: 5px;
+	margin: 20px;
+	padding: 15px;
+}
+
+.produk-card img {
+	display: flex;
+	width: 105px;
+	height: auto;
+	border-radius: 5%;
+	margin: 0px 18px 0px -20px;
+}
+
+.produk-card .produk-text h4 {
+	color: var(--text-three);
+	font-family: 'Acme', sans-serif;
+	font-size: 22px;
+	margin-bottom: 5px;
+}
+
+.produk-card .produk-text h5 {
+	color: var(--text-four);
+	font-size: 18px;
+}
+
+/* Contact */
+.contact-page {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100vh;
+}
+
+.contact-page .contact-text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contact-page .contact-text p {
+	color: var(--text-secondary);
+	display: flex;
+	text-align: center;
+	font-size: 18px;
+	margin-bottom: 18px;
+	padding: 0px 10px;
+}
+
+.sosmed-tab {
+	display: flex;
+	justify-content: center;
+}
+
+.sosmed-tab .sosmed-item {
+	display: flex;
+	align-items: center;
+	color: var(--text-three);
+	background-color: var(--bg-four);
+	text-decoration: none;
+	margin: 0px 10px;
+	padding: 8px;
+	border-radius: 4px;
+	transition: 0.5s;
+}
+
+.sosmed-tab .sosmed-item:hover {
+	transition: 0.5s;
+	box-shadow: 2px 2px 1px var(--bg-three);
+}
+
+.icon {
+	font-size: 20px;
+	padding-right: 5px;
+}
+
+.sosmed-tab .sosmed-item span {
+	display: flex;
+	align-items: center;
+}
+
+/* Maps */
+.maps-page {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: var(--bg-primary);
+}
+
+.maps-page .maps-frame {
+	width: 150vh;
+	height: 70vh;
+	padding: 1rem;
+	padding-bottom: 0.8rem;
+	background-color: var(--bg-secondary);
+	border-radius: 10px;
+}
+
+.maps-page .maps-frame iframe {
+	width: 100%;
+	height: 100%;
+	border: 0;
+	border-radius: 10px;
+}
+
+/* footer */
+footer {
+	display: flex;
+	flex-direction: column;
+}
+
+footer .footer-main {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 40px 50px;
+}
+
+footer .footer-main a.logo {
+	display: flex;
+	color: var(--text-primary);
+	font-family: 'Acme', sans-serif;
+	font-size: 40px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+footer .footer-main a.logo:hover {
+	transform: scale(1.05);
+	transition: 0.5s;
+}
+
+footer .footer-main .footer-detail {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	width: 40%;
+}
+
+footer .footer-main .footer-detail h3 {
+	color: var(--text-secondary);
+	font-size: 17px;
+}
+
+footer .footer-main .footer-detail .footer-contact {
+	display: flex;
+	justify-content: space-between;
+	color: var(--text-secondary);
+}
+
+footer .footer-main .footer-detail .footer-contact .contact-detail {
+	display: flex;
+	align-items: center;
+	padding: 5px;
+}
+
+footer .footer-main .footer-detail .footer-contact .contact-detail i {
+	padding-right: 5px;
+	font-size: 20px;
+}
+
+footer .footer-text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--bg-primary);
+	color: var(--text-secondary);
+	padding: 15px;
+}
+
+footer .footer-text a {
+	color: var(--text-secondary);
+	letter-spacing: 0.1rem;
+	text-decoration: none;
+}
+
+footer .footer-text a:hover {
+	color: var(--text-primary);
+	transition: 0.25s;
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+	nav {
+		height: 100px;
+	}
+
+	nav .logo {
+		font-size: 50px;
+	}
+
+	nav .menu ul li a {
+		font-size: 20px;
+	}
+
+	header p {
+		margin: 0px 5rem;
+	}
+
+	.section-title {
+		font-size: 75px;
+	}
+
+	.produk .produk-list .produk-card {
+		width: 500px;
+		height: 150px;
+	}
+
+	.produk-card img {
+		width: auto;
+		height: 200px;
+	}
+
+	.produk-card .produk-text h4 {
+		font-size: 33px;
+		margin-bottom: 10px;
+	}
+
+	.produk-card .produk-text h5 {
+		font-size: 28px;
+	}
+
+	.contact-page .contact-text p {
+		font-size: 30px;
+		padding: 0px 25px;
+	}
+
+	.sosmed-tab .sosmed-item {
+		font-size: 22px;
+		padding: 10px 25px;
+	}
+
+	.sosmed-tab .sosmed-item:hover {
+		box-shadow: 4px 4px 2px var(--bg-three);
+	}
+
+	.icon {
+		font-size: 35px;
+		padding-right: 10px;
+	}
+
+	.maps-page .maps-frame {
+		width: 80%;
+	}
+
+	footer .footer-main {
+		flex-direction: column;
+	}
+
+	footer .footer-main a.logo {
+		font-size: 50px;
+	}
+
+	footer .footer-main .footer-detail {
+		width: 100%;
+	}
+
+	footer .footer-main .footer-detail h3 {
+		margin: 40px 50px 20px 50px;
+		font-size: 20px;
+	}
+
+	footer .footer-main .footer-detail .footer-contact {
+		justify-content: space-evenly;
+	}
+}
+
+@media screen and (max-width: 768px) {
+
+	nav {
+		height: 55px;
+		padding: 0px 20px;
+	}
+
+	nav .logo {
+		width: 80%;
+		font-size: 30px;
+	}
+
+	nav .menu ul {
+		display: none;
+	}
+
+	div.menu-toggle {
+		width: 15%;
+		display: flex;
+	}
+
+	div.mobile-menu {
+		position: fixed;
+		background-color: var(--bg-three);
+		width: 100%;
+	}
+
+	div.mobile-menu ul li {
+		text-align: center;
+		margin: 5px 0;
+		padding: 7px;
+	}
+
+	div.mobile-menu ul li a {
+		color: var(--text-three);
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	header h1 {
+		font-size: 3.7rem;
+	}
+
+	header p {
+		font-size: 1.3rem;
+		margin: 0;
+	}
+
+	.section-title {
+		font-size: 45px;
+	}
+
+	.produk-card .produk-text h4 {
+		font-size: 24px;
+	}
+
+	.produk-card .produk-text h5 {
+		font-size: 22px;
+	}
+
+	.contact-page .contact-text p {
+		font-size: 18px;
+		padding: 0;
+	}
+
+	.icon {
+		font-size: 25px;
+		padding-right: 3px;
+	}
+
+	.sosmed-tab {
+		flex-wrap: wrap;
+	}
+
+	.sosmed-tab .sosmed-item {
+		margin: 5px 5px;
+	}
+
+	.sosmed-tab .sosmed-item:hover {
+		box-shadow: 2px 2px 1px var(--bg-three);
+	}
+
+	.sosmed-tab .sosmed-item span {
+		font-size: 18px;
+	}
+
+	.maps-page .maps-frame {
+		width: 100%;
+		height: 40%;
+		padding: 0;
+		border-radius: 0;
+	}
+
+	.maps-page .maps-frame iframe {
+		height: 100%;
+		border-radius: 0;
+	}
+
+	footer .footer-main {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0;
+		margin: 40px 0;
+	}
+
+	footer .footer-main .footer-detail {
+		width: 100%;
+	}
+
+	footer .footer-main .footer-detail h3 {
+		margin-bottom: 1rem;
+		font-size: 17px;
+	}
+
+	footer .footer-main .footer-detail .footer-contact {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	footer .footer-text {
+		text-align: center;
+		font-size: 1rem;
+	}
+}

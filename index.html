@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Keripik Mbak Yuli | Produsen Keripik Tempe, Tales, dan Rempeyek</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="dist/css/style.css">
 	<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
+
 <body>
-	<nav>
+	<nav id="main-nav">
 		<div class="logo">
-			<a href="#home"><h4>Mbak Yuli</h4></a>
+			<a href="#home">
+				<h4 id="logo">Mbak Yuli</h4>
+			</a>
 		</div>
 		<div class="menu">
 			<ul>
@@ -21,47 +25,41 @@
 				<li><a href="#maps">Maps</a></li>
 			</ul>
 		</div>
-		<div class="auth">
-			<ul>
-				<li><a href="#">Login</a></li>
-				<li><a href="#">Register</a></li>
-			</ul>
-		</div>
 		<div class="menu-toggle">
-			<input type="checkbox">
+			<input type="checkbox" id="input-menu" onclick="updateMenu()">
 			<span></span>
 			<span></span>
 			<span></span>
-		</div>
-
-		<div class="mobile-menu">
-			<ul>
-				<a href="#home"><li>Home</li></a>
-				<a href="#produk"><li>Produk</li></a>
-				<a href="#contact"><li>Contact</li></a>
-				<a href="#maps"><li>Maps</li></a>
-			</ul>
 		</div>
 	</nav>
 
-	<span  id="home"></span>
+	<div class="mobile-menu" id="mobile-menu">
+		<ul>
+			<li><a href="#home" id="menu-list">Home</a></li>
+			<li><a href="#produk" id="menu-list">Produk</a></li>
+			<li><a href="#contact" id="menu-list">Contact</a></li>
+			<li><a href="#maps" id="menu-list">Maps</a></li>
+		</ul>
+	</div>
+
+	<span id="home"></span>
 
 	<header>
 		<div class="bg-image"></div>
-		<h2>Keripik <br> Mbak Yuli</h2>
-		<p>Produsen Keripik Tempe, Keripik Tales, dan Rempeyek.</p>
+		<h1>Keripik <br> Mbak Yuli</h1>
+		<p>Produsen Keripik Tempe, Keripik Tales, dan Rempeyek</p>
 	</header>
 
-	<span  id="produk"></span>
+	<span id="produk"></span>
 
 	<div class="produk">
-		<div  class="produk-title">
-			<h3>Produk</h3>
+		<div class="produk-title">
+			<h3 class="section-title">Produk</h3cla>
 		</div>
 		<div class="produk-list">
 			<div class="produk-card">
-				<div class="image-produk">
-					<img src="images/Tempe-100g.jpg" alt="Keripik Tempe 100gram">
+				<div class="produk-image">
+					<img src="assets/img/Tempe-100g.jpg" alt="Keripik Tempe 100gram">
 				</div>
 				<div class="produk-text">
 					<h4>Keripik Tempe 100g</h4>
@@ -69,8 +67,8 @@
 				</div>
 			</div>
 			<div class="produk-card">
-				<div class="image-produk">
-					<img src="images/Tempe-200g.jpg" alt="Keripik Tempe 200gram">
+				<div class="produk-image">
+					<img src="assets/img/Tempe-200g.jpg" alt="Keripik Tempe 200gram">
 				</div>
 				<div class="produk-text">
 					<h4>Keripik Tempe 200g</h4>
@@ -78,8 +76,8 @@
 				</div>
 			</div>
 			<div class="produk-card">
-				<div class="image-produk">
-					<img src="images/Tales-150g.jpg" alt="Keripik Tales 150gram">
+				<div class="produk-image">
+					<img src="assets/img/Tales-150g.jpg" alt="Keripik Tales 150gram">
 				</div>
 				<div class="produk-text">
 					<h4>Keripik Tales 150g</h4>
@@ -93,7 +91,7 @@
 
 	<div class="contact-page">
 		<div class="contact-text">
-			<h3>Hubungi Kami</h3>
+			<h3 class="section-title">Hubungi Kami</h3>
 			<p>Hubungi kami melalui sosial media yang tertera dibawah</p>
 		</div>
 		<div class="contact-sosmed">
@@ -117,26 +115,26 @@
 	<span id="maps"></span>
 
 	<div class="maps-page">
-		<h3>Lokasi</h3>
+		<h3 class="section-title">Lokasi</h3>
 		<div class="maps-frame">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.938298795088!2d110.59985991477612!3d-7.472066194609887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x655fe23739389557!2sKeripik%20Tempe%20%26%20Tales%20%22Mbak%20Yuli%22!5e0!3m2!1sid!2sid!4v1640171557283!5m2!1sid!2sid" allowfullscreen="" loading="lazy"></iframe>
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.938298795088!2d110.59985991477612!3d-7.472066194609887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x655fe23739389557!2sKeripik%20Tempe%20%26%20Tales%20%22Mbak%20Yuli%22!5e0!3m2!1sid!2sid!4v1640171557283!5m2!1sid!2sid"
+				loading="lazy"></iframe>
 		</div>
 
 	</div>
 
-	<div class="footer">
+	<footer>
 		<div class="footer-main">
-			<a class="logo" href="#home"><h4>Mbak Yuli</h4></a>
-			<div class="footer-p">
+			<a class="logo" href="#home">Mbak Yuli</a>
+			<div class="footer-detail">
 				<h3>RT.05/RW.02, Mukiran, Kaliwungu, Kabupaten Semarang, Jawa Tengah 50778</h3>
-				<div class="ct-text">
-					<div class="ct-email">
-						<div class="email-main">
-							<i class="bx bx-envelope icon"></i>
-							<span>contact.mbakyuli@gmail.com</span>
-						</div>
+				<div class="footer-contact">
+					<div class="contact-detail">
+						<i class="bx bx-envelope icon"></i>
+						<span>contact.mbakyuli@gmail.com</span>
 					</div>
-					<div class="ct-whatsapp">
+					<div class="contact-detail">
 						<i class="bx bxl-whatsapp icon"></i>
 						<span>+62 812 5227 4728</span>
 					</div>
@@ -144,12 +142,13 @@
 			</div>
 		</div>
 		<div class="footer-text">
-			<h5>Copyright &copy <span id="yearNow"></span> Keripik Mbak Yuli. All Rights Reserved | Developed by <a href="https://linktr.ee/ariffylnd">Ariffylnd</a>.</h5>
+			<h5>Copyright &copy <span id="yearNow"></span> Keripik Mbak Yuli. All Rights Reserved | Developed by <a
+					href="https://linktr.ee/ariffylnd">Ariffylnd</a>.</h5>
 		</div>
-	</div>
+	</footer>
 
 </body>
 
-<script src="main.js" type="text/javascript"></script>
+<script src="dist/js/main.js" type="text/javascript"></script>
 
 </html>
